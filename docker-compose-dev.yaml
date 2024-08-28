@@ -1,0 +1,33 @@
+services:
+  nginx:
+    image: nginx:1.27.0-alpine
+    container_name: ${NGINX_CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - ${NGINX_PORT_OUT}:${NGINX_PORT}
+      - ${NGINX_SSL_OUT}:${NGINX_SSL}
+    volumes:
+      - ./etc/nginx/conf.d:/etc/nginx/conf.d:ro
+      # Default directory.
+      #- :/usr/share/nginx/html
+    #env_file:
+    #  - ./.env
+
+  fastapi-app:
+    build:
+      dockerfile: Dockerfile.dev
+      args:
+        FASTAPI_APP_NAME: ${}
+        REACT_PORT: ${FASTAPI_PORT}
+      #command: sh -c ""
+    restart: unless-stopped
+    ports:
+      - ${FASTAPI_PORT_OUT}:${FASTAPI_PORT}
+    volumes:
+      - hostPath:containerPath:ro
+    environment:
+      - PYTHON_ENV=development
+    #env_file:
+    #  - ./.env
+    depends_on:
+      - nginx
