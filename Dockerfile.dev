@@ -11,7 +11,7 @@ ARG PYTHON_PORT
 WORKDIR /app
 
 # Copy
-COPY ./src .
+COPY ./src/ .
 
 # Install packages.
 RUN 

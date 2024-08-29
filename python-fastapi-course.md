@@ -5,7 +5,7 @@ YouTube: `https://www.youtube.com/watch?v=Yw4LmMQXXFs&list=PL8VzFQ8k4U1L5QpSapVE
 
 Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 
-01. Course Intro
+01. Python FastAPI Course Intro
 02.
 03.
 04.
@@ -25,3 +25,10 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 18.
 19.
 20.
+
+
+## Tech Stack
+
+* Python
+* FastAPI
+* SQLAlchemy
