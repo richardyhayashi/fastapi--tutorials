@@ -17,7 +17,7 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 09. Install dependencies w/ pip
 10. Starting FastAPI
 11. Path Operations
-12.
+12. Intro to Postman
 13.
 14.
 15.
