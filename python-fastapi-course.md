@@ -20,7 +20,7 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 12. Intro to Postman
 13. HTTP Requests
 14. Schema Validation with Pydantic
-15.
+15. CRUD Operations
 16.
 17.
 18.
@@ -43,6 +43,14 @@ Pydantic  `https://docs.pydantic.dev`
 ### Documents
 
 * 'HTTP Methods' - `https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods`
+
+### CRUD Operations
+
+* Create  POST        /posts
+* Read    GET         /posts  or  /posts/:id
+* Update  PUT/PATCH   /posts/:id
+* Delete  DELETE      /posts/;id
+
 
 ### Docker
 
@@ -76,8 +84,7 @@ In 'python-fastapi-course' folder:
 
 #### Create/Activate Environment
 
-In Top Source Directory.
-
+In top project source Directory:
 `$ pipenv shell`
 
 * Creates: Pipfile(Toml Format), Pipfile.lock
