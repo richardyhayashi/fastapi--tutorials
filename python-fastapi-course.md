@@ -21,7 +21,7 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 13. HTTP Requests
 14. Schema Validation with Pydantic
 15. CRUD Operations
-16.
+16. Storing in Array
 17.
 18.
 19.
