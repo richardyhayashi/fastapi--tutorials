@@ -5,21 +5,24 @@ FROM python:3.12.5-alpine
 ENV LANG=C.UTF-8
 
 # Import Arguments
-ARG PYTHON_PORT
+ARG FASTAPI_APP_NAME
+ARG FASTAPI_PORT
+ARG FASTAPI_SRC_DIR
 
 # Set up working directory.
 WORKDIR /app
 
 # Copy
-COPY ./src/ .
+COPY ./src${FASTAPI_SRC_DIR}/requirements.txt .
 
 # Install packages.
-RUN 
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source.
-COPY ./src .
+COPY ./src${FASTAPI_SRC_DIR} .
 
 # Document exposed port.
-EXPOSE ${PYTHON_PORT}
+EXPOSE ${FASTAPI_PORT}
 
 # Start app.
+CMD ["uvicorn", "main:app", "--reload", "--port", "8000", "--host", "0.0.0.0"]

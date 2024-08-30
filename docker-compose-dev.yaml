@@ -14,19 +14,22 @@ services:
     #  - ./.env
 
   fastapi-app:
+    image: ${FASTAPI_IMAGE_NAME}:${PROJECT_VERSION}
+    container_name: ${FASTAPI_CONTAINER_NAME}
     build:
       dockerfile: Dockerfile.dev
       args:
-        FASTAPI_APP_NAME: ${}
-        REACT_PORT: ${FASTAPI_PORT}
+        FASTAPI_APP_NAME: ${PROJECT_NAME}
+        FASTAPI_PORT: ${FASTAPI_PORT}
+        FASTAPI_SRC_DIR: ${FASTAPI_SRC_DIR}
       #command: sh -c ""
     restart: unless-stopped
     ports:
       - ${FASTAPI_PORT_OUT}:${FASTAPI_PORT}
     volumes:
-      - hostPath:containerPath:ro
+      - ./src${FASTAPI_SRC_DIR}:/app
     environment:
-      - PYTHON_ENV=development
+      - FASTAPI_ENV=development
     #env_file:
     #  - ./.env
     depends_on:

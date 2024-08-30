@@ -1,4 +1,4 @@
 services:
-  react-app:
+  fastapi-app:
     build:
       context: .

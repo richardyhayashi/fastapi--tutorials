@@ -19,7 +19,7 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 11. Path Operations
 12. Intro to Postman
 13. HTTP Requests
-14.
+14. Schema Validation with Pydantic
 15.
 16.
 17.
@@ -27,9 +27,10 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 19.
 20.
 
-## FastApi Docs
+## Docs
 
-`https://fastapi.tiangolo.com/`
+FastApi `https://fastapi.tiangolo.com/`
+Pydantic  `https://docs.pydantic.dev`
 
 ## Project Notes
 
@@ -42,6 +43,14 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 ### Documents
 
 * 'HTTP Methods' - `https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods`
+
+### Docker
+
+* Remember to update requirements.txt on adding packages.
+
+Set in .env
+`FASTAPI_SRC_DIR=/python-fastapi-aourse`
+`FAST_API_START_DEV_SERVER=`
 
 ### Using 'pipenv'
 
@@ -112,7 +121,7 @@ In python:
 `$ pipenv requirements`
 
 To requirements.txt
-`$ pipenv requiements > requirements.`
+`$ pipenv requiements > requirements.txt`
 
 #### Deactivate Virtual Environment
 
