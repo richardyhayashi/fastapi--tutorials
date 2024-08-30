@@ -1,21 +1,22 @@
-# Python API Development Course
-by `Sanjeev Thiyagarajan`
+# Python API Development - Comprehensive Course for Beginners
+by `freeCodeCamp.org`, `Sanjeev Thiyagarajan`
 
-YouTube: `https://www.youtube.com/watch?v=Yw4LmMQXXFs&list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM`
+YouTube: `https://www.youtube.com/watch?v=0sOvCWFmrtA&t=20s`
 
 Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 
-01. Python FastAPI Course Intro
-02.
-03.
-04.
-05.
-06.
-07.
-08.
-09.
-10.
-11.
+ x. Intro
+01. Project Overview Python
+02. Mac Python Installation
+03. Mac VS Code install and setup
+04. Windows Python Installation
+05. Windows VS Code install and setup
+06. Python virtual Env Basics
+07. Virtual Env on windows
+08. Virtual Env on Mac
+09. Install dependencies w/ pip
+10. Starting FastAPI
+11. Path Operations
 12.
 13.
 14.
@@ -26,9 +27,121 @@ Source: 'https://github.com/Sanjeev-Thiyagarajan/fastapi-course'
 19.
 20.
 
+## FastApi Docs
 
-## Tech Stack
+`https://fastapi.tiangolo.com/`
+
+## Project Notes
+
+### Tech Stack
 
 * Python
 * FastAPI
 * SQLAlchemy
+
+### Documents
+
+* 'HTTP Methods' - `https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods`
+
+### Using 'pipenv'
+
+In 'python-fastapi-course' folder:
+`$ pipenv shell`
+
+### Install Packages(Using pipenv)
+
+`$ pipenv install fastapi[all]`
+
+### Run App
+
+`$ uvicorn main:app --reload`
+
+
+## Python Virtual Environment
+
+### 'pipenv'
+
+#### Install pipenv
+
+`$ pip install pipenv`
+
+#### Create/Activate Environment
+
+In Top Source Directory.
+
+`$ pipenv shell`
+
+* Creates: Pipfile(Toml Format), Pipfile.lock
+
+##### Create Virtual Environment From Pipfile
+
+`$ pipenv install` using Pipfile
+
+#### Change Version
+
+`$ pipenv --python {version}`
+
+#### Install package
+
+`$ pipenv install {package}`
+or
+`$ pipenv install {package} --dev`
+
+#### Uninstall package
+
+`$ pipenv uninstall {package}`
+
+#### Run in Current Environment
+
+`$ pipenv run python script.py`
+or
+`$ pipenv run python`
+
+##### Check Environment
+
+In python:
+`>>> import sys`
+`>>> sys.executable`
+
+#### Install requirements.txt
+
+`$ pipenv install -r requirements.txt`
+
+#### Create requirements.txt
+
+`$ pipenv requirements`
+
+To requirements.txt
+`$ pipenv requiements > requirements.`
+
+#### Deactivate Virtual Environment
+
+`$ exit`
+
+#### Remove Virtual Environment
+
+`$ pipenv --rm`
+
+
+### 'venv'
+
+* Built into Python
+
+#### Create Virtual Environment
+
+`$ python -m venv {.venv|name}`
+
+* Creates `.venv|name` directory
+
+#### Activate Virtual Environment
+
+`source .venv/bin/activate`
+
+#### Deactivate Virtual Environment
+ 
+`deactivate`
+
+#### Select Environment
+
+VSCode:
+`View > Command Palette > Python: Select Interpreter > Enter interpreter path: .venv/bin/python`
